@@ -35,7 +35,7 @@ app.get('/api/visitors', (req, res) => {
   let total = 0;
 
   Object.keys(result).forEach((el) => {
-    if (el !== month && ignore !== el) {
+    if (el !== 'month' && ignore !== el) {
       const attendance = parseInt(result[el]);
       if (attendance > max) {
         max = attendance;
